@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,15 @@
         <h1>ISG Bizerte</h1>
         <nav>
             <ul>
-                <li><a href="home.html">Home / Connection</a></li>
+                <li><a href="home.html">Accueil / Connexion</a></li>
                 <li><a href="inscription.html">Inscription</a></li>
                 <li><a href="notes.html">Consulter Notes</a></li>
                 <li><a href="paiement.html">Consulter Paiement</a></li>
                 <li><a href="emploi.html">Emploi / Secteurs</a></li>
-                <li><a href="news.html">News / Events</a></li>
-                <li><a href="professeurs.html">Listes de Professeurs</a></li>
-                <li><a href="coefficients.html">Coefficients Notes</a></li>
-                <li><a href="demande_master.html">Demande Master</a></li>
+                <li><a href="news.html">Actualités / Événements</a></li>
+                <li><a href="professeurs.html">Listes des Professeurs</a></li>
+                <li><a href="coefficients.html">Coefficients des Notes</a></li>
+                <li><a href="demande_master.html">Demande de Master</a></li>
                 <li><a href="cours.html">Cours / Devoirs</a></li>
             </ul>
         </nav>
@@ -27,25 +27,83 @@
 
     <main>
         <h2>Demande d'inscription en Master</h2>
+        <p>Veuillez remplir le formulaire ci-dessous pour soumettre votre demande d'inscription à l'un des programmes de Master proposés par l'ISG Bizerte.</p>
+
         <form action="#" method="post">
-            <label for="nom">Nom:</label>
-            <input type="text" id="nom" name="nom" required><br>
-            <label for="prenom">Prénom:</label>
-            <input type="text" id="prenom" name="prenom" required><br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
-            <label for="master">Choix du Master:</label>
-            <select id="master" name="master" required>
-                <option value="informatique">Master en Informatique</option>
-                <option value="marketing">Master en Marketing</option>
-                <option value="finance">Master en Finance</option>
-            </select><br>
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <label for="nom">Nom:</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="prenom">Prénom:</label>
+                <input type="text" id="prenom" name="prenom" required><br>
+
+                <label for="date_naissance">Date de naissance:</label>
+                <input type="date" id="date_naissance" name="date_naissance" required><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="telephone">Numéro de téléphone:</label>
+                <input type="tel" id="telephone" name="telephone" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Informations académiques</legend>
+                <label for="diplome">Diplôme obtenu:</label>
+                <input type="text" id="diplome" name="diplome" placeholder="Licence en ..." required><br>
+
+                <label for="etablissement">Établissement:</label>
+                <input type="text" id="etablissement" name="etablissement" required><br>
+
+                <label for="moyenne">Moyenne générale:</label>
+                <input type="number" id="moyenne" name="moyenne" step="0.01" min="0" max="20" required><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Choix du programme</legend>
+                <label for="master">Choix du Master:</label>
+                <select id="master" name="master" required>
+                    <option value="informatique">Master en Informatique</option>
+                    <option value="marketing">Master en Marketing</option>
+                    <option value="finance">Master en Finance</option>
+                    <option value="gestion">Master en Gestion</option>
+                    <option value="logistique">Master en Logistique</option>
+                </select><br>
+
+                <label for="motivation">Lettre de motivation:</label><br>
+                <textarea id="motivation" name="motivation" rows="6" cols="40" placeholder="Expliquez pourquoi vous postulez pour ce Master" required></textarea><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Documents requis</legend>
+                <p>Veuillez télécharger les documents suivants :</p>
+                <label for="cv">CV (format PDF):</label>
+                <input type="file" id="cv" name="cv" accept=".pdf" required><br>
+
+                <label for="releve">Relevé de notes (format PDF):</label>
+                <input type="file" id="releve" name="releve" accept=".pdf" required><br>
+
+                <label for="photo">Photo d'identité:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required><br>
+            </fieldset>
+
             <button type="submit">Envoyer la demande</button>
         </form>
+
+        <section>
+            <h3>Informations importantes :</h3>
+            <ul>
+                <li>Les candidatures doivent être soumises avant la date limite : <strong>31 août 2025</strong>.</li>
+                <li>Tout dossier incomplet sera rejeté.</li>
+                <li>Les résultats de sélection seront communiqués par email.</li>
+            </ul>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 ISG Bizerte. Tous droits réservés.</p>
+        <p>&copy; 2025 ISG Bizerte. Tous droits réservés. | <a href="contact.html">Contactez-nous</a></p>
     </footer>
 </body>
+<script src="Masterscript.js" defer></script>
 </html>
