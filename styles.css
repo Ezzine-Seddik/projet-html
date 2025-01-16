@@ -246,4 +246,6 @@ form button:hover {
     background-color: #f2f2f2; /* Light gray background for table headers */
   }
   
-
+  #newsMain{
+    max-width: 1800px;
+  }
