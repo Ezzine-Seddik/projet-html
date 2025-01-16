@@ -157,7 +157,7 @@ nav ul li a:hover {
 
 main {
     padding: 2rem;
-    background: #fff;
+    
     margin: 1rem auto;
     max-width: 800px;
     border-radius: 8px;
@@ -213,3 +213,18 @@ form button {
 form button:hover {
     background-color: #003d80;
 }
+
+.emploi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Optional: Adds space between images */
+}
+
+.emploi-image {
+    width: 70%;
+    height: auto; /* Maintains aspect ratio */
+    display: block;
+    
+}
+
