@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulter Paiement - ISG Bizerte</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Consulter Paiement - ISG Bizerte</title>
 </head>
 <body>
     <header>
@@ -28,6 +28,38 @@
     <main>
         <h2>Consulter Paiement</h2>
         <p>Connectez-vous pour voir votre statut de paiement.</p>
+
+        <h3>Statut de Paiement des Étudiants</h3>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Type de Paiement</th>
+                    <th>Code de Paiement</th>
+                    <th>Statut de Paiement</th>
+                    <th>Montant Payé (TND)</th>
+                  
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Première paiement</td>
+                    <td>20230101</td>
+                    <td>Payé</td>
+                    <td>60</td>
+                   
+                    <td><button disabled>Paiement Complété</button></td>
+                </tr>
+                <tr>
+                    <td>Deuxième paiement</td>
+                    <td>20230102</td>
+                    <td>Partiellement Payé</td>
+                    <td>70</td>
+                  
+                    <td><a href="paiement_action.html"><button>Payer</button></a></td>
+                </tr>
+            </tbody>
+        </table>
     </main>
 
     <footer>
